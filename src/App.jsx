@@ -1,11 +1,10 @@
 import './App.css'
-import MyClock from './02/MyClock'
+import MyDiv1 from './03/MyDiv1';
 
 function App() {
-  let x = undefined;
   return (
     <>
-      <MyClock/>
+      <MyDiv1/>
     </>
   )
 }
