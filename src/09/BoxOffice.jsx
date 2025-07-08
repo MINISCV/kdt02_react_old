@@ -10,13 +10,9 @@ export default function BoxOffice() {
         return new Date(new Date().setDate(new Date().getDate() - 1)).toISOString().split('T')[0];
     }
 
-    const handleDate = () => {
-        getFetchData(day.current.value.replaceAll("-",""));
-    }
-
-    const getFetchData = async (sday) => {
+    const getFetchData = async () => {
         const apiKey = import.meta.env.VITE_MV_API;
-        const date = sday;
+        const date = day.current.value.replaceAll("-", "");
         let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${apiKey}&targetDt=${date}&itemPerPage=10`;
         const resp = await fetch(url);
         const data = await resp.json();
@@ -24,7 +20,7 @@ export default function BoxOffice() {
     }
 
     useEffect(() => {
-        getFetchData(yesterday().replaceAll("-", ""));
+        getFetchData();
     }, []);
 
     const handleItem = (item) => {
@@ -65,7 +61,7 @@ export default function BoxOffice() {
     return (
         <>
             <div className="w-9/10 flex justify-end m-2">
-                <input type="date" ref={day} defaultValue={yesterday()} onChange={handleDate} />
+                <input type="date" ref={day} defaultValue={yesterday()} onChange={getFetchData} max={yesterday()} />
             </div>
             <div className="w-9/10 relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-right rtl:text-right text-black">
