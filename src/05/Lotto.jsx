@@ -1,5 +1,5 @@
-import TailBall from "../assets/component/TailBall"
-import TailButton from "../assets/component/TailButton"
+import TailBall from "../component/TailBall"
+import TailButton from "../component/TailButton"
 import { useState } from "react"
 
 export default function Lotto() {
