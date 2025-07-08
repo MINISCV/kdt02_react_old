@@ -19,7 +19,7 @@ export default function TailButton({ caption, color, onClick }) {
 		"orange": "hover:bg-orange-400",
 	}
 	return (
-		<button className={`p-4 rounded-xl ${colors[color]} text-white mx-2 hover:cursor-pointer hover:font-bold ${bgHover[color]}`} onClick={onClick}>
+		<button className={`mx-2 p-4 rounded-xl text-white hover:cursor-pointer hover:font-bold ${colors[color]} ${bgHover[color]}`} onClick={onClick}>
 			{caption}
 		</button>
 	)

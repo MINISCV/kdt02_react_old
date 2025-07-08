@@ -10,6 +10,7 @@ import MyToggle from './07/MyToggle'
 import MyEffect from './08/MyEffect'
 import BoxOffice from './09/BoxOffice'
 import Traffic from './10/Traffic'
+import MyRef from './11/MyRef'
 
 function App() {
 	return (
@@ -22,7 +23,7 @@ function App() {
 					<GroupText />
 				</header>
 				<main className="w-full flex-grow overflow-y-auto flex flex-col justify-start items-center py-10">
-					<Traffic />
+					<BoxOffice />
 				</main>
 				<footer className="w-full min-h-20 flex justify-center items-center bg-black text-white">
 					K-digital 2025 2기
