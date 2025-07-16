@@ -1,7 +1,10 @@
 import TailButton from '../component/TailButton'
-export default function MyDiv3({ n, setN }) {
+import { useAtom } from "jotai";
+import { cntAtom, cntAtom2 } from "./CountAtoms"
+export default function MyDiv3() {
+  const [n, setN] = useAtom(cntAtom);
+  const [n2] = useAtom(cntAtom2);
   return (
-    <>
       <div className="w-9/10 h-9/10 bg-green-400 flex flex-col items-center text-white font-bold p-10 text-2xl">
         <div className="w-9/10">
           <p>Div3</p>
@@ -11,6 +14,5 @@ export default function MyDiv3({ n, setN }) {
           <TailButton caption="감소" color="blue" onClick={() => setN(n - 1)} />
         </div>
       </div>
-    </>
   )
 }

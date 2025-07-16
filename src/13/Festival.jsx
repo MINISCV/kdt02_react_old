@@ -24,8 +24,9 @@ export default function Festival() {
 
     useEffect(() => {
         if(!cdata || !cdata.length) return;
-        setOption([...new Set(cdata.map(item => item.GUGUN_NM))].map(item => <option key={item} value={item}>{item}</option>));
+        setOption([...new Set(cdata.map(item => item.GUGUN_NM))].sort().map(item => <option key={item} value={item}>{item}</option>));
     }, [cdata])
+    
     return (
         <div className="w-8/10 h-full flex flex-col items-center justify-start">
             <div className="text-3xl font-bold">

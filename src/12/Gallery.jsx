@@ -15,6 +15,7 @@ export default function Gallery() {
     }
     const onCancel = (e) => {
         e.preventDefault();
+        setCdata([]);
         kw.current.value = ""
         kw.current.focus();
     }
