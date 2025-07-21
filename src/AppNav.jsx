@@ -47,6 +47,11 @@ export default function AppNav() {
                     prob상태변경
                 </div>
             </Link>
+            <Link to="/ev">
+                <div className="p-4 m-2 border border-amber-800 rounded bg-amber-50 font-bold hover:bg-amber-200">
+                    전기자동차
+                </div>
+            </Link>
         </div>
     )
 }

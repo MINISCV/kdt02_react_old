@@ -2,7 +2,7 @@ import MyDiv1 from "./MyDiv1";
 import { useAtom } from "jotai";
 import { cntAtom, cntAtom2 } from "./CountAtoms"
 export default function DivMain() {
-  const [n, setN] = useAtom(cntAtom);
+  const [n] = useAtom(cntAtom);
   const [n2] = useAtom(cntAtom2);
 
   return (

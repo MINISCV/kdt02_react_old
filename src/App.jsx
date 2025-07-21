@@ -1,6 +1,8 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import AppNav from './AppNav'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GroupText from './01/GroupText'
 import MyClock from './02/MyClock'
 import Lotto from './05/Lotto'
@@ -12,8 +14,7 @@ import Festival from './13/Festival'
 import Fcst from './15/Fcst'
 import FcstList from './15/FcstList'
 import DivMain from './17/Divmain'
-import AppNav from './AppNav'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ElectricVehicle from './18/ElectricVehicle'
 export default function App() {
 	return (
 		<BrowserRouter>
@@ -25,7 +26,7 @@ export default function App() {
 					<AppNav />
 					<GroupText />
 				</header>
-				<main className="w-full flex-grow overflow-y-auto flex flex-col justify-start items-center py-10">
+				<main className="w-full flex-grow overflow-y-auto flex flex-col justify-start items-center py-2">
 					<Routes>
 						<Route path='/' element={<MyClock />} />
 						<Route path='/lotto' element={<Lotto />} />
@@ -37,9 +38,10 @@ export default function App() {
 						<Route path='/fcst' element={<Fcst />} />
 						<Route path='/fcstlist' element={<FcstList />} />
 						<Route path='/divmain' element={<DivMain />} />
+						<Route path='/ev' element={<ElectricVehicle />} />
 					</Routes>
 				</main>
-				<footer className="w-full min-h-20 flex justify-center items-center bg-black text-white">
+				<footer className="w-full min-h-10 flex justify-center items-center bg-black text-white">
 					K-digital 2025 2기
 				</footer>
 			</div>
