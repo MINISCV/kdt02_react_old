@@ -13,7 +13,7 @@ import Gallery from './12/Gallery'
 import Festival from './13/Festival'
 import Fcst from './15/Fcst'
 import FcstList from './15/FcstList'
-import DivMain from './17/Divmain'
+import DivMain from './17/DivMain'
 import ElectricVehicle from './18/ElectricVehicle'
 export default function App() {
 	return (
